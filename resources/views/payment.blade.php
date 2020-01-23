@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Payment</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,11 +15,8 @@
                             </div>
                         @endif
                             <a href="/home">Wróć</a><br>
-                            nr konta: 1234 5678 9828 2132 0000 000
-                            <br>
-                            Dane przelewu:xxxxx<br>
-                            Imie:xxxxxx<br>
-                            Nazwisko:xxxxxx<br>
+                            <a href="/cash">Gotówka</a><br>
+                            <a href="/card">Przelew</a><br>
                     </div>
                 </div>
             </div>

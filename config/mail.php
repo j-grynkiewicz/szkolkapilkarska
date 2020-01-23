@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'smtp.mailtrap.io'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'szkolkapilkarska12@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Szkolka Piłkarska'),
+        'address' => env('MAIL_FROM_ADDRESS', 'szkolka@szkolkapilkarska.test'),
+        'name' => env('MAIL_FROM_NAME', 'Szkólka Piłkarska'),
     ],
 
     /*
@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME', 'szkolkapilkarska12@gmail.com'),
+    'username' => env('MAIL_USERNAME', 'd9114cc46bec3c'),
 
-    'password' => env('MAIL_PASSWORD', 'Szkolka-NZI'),
+    'password' => env('MAIL_PASSWORD', 'd4bdea68519c6a'),
 
     /*
     |--------------------------------------------------------------------------

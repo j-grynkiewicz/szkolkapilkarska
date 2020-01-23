@@ -25,6 +25,53 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function admin(){
+        return view('admin');
+    }
+    public function settings()
+    {
+        return view('settings');
+    }
+    public function coaches()
+    {
+        return view('coachList');
+    }
+    public function coach()
+    {
+        return view('coach');
+    }
+    public function fields()
+    {
+        return view('fieldList');
+    }
+    public function field()
+    {
+        return view('field');
+    }
+    public function payment()
+    {
+        return view('payment');
+    }
+    public function cash()
+    {
+        return view('cash');
+    }
+    public function card()
+    {
+        return view('card');
+    }
+    public function thanks()
+    {
+        return view('thanksReservation');
+    }
 
-
+    public function trainings()
+    {
+        return view('trainingList');
+    }
+    public function training()
+    {
+        return view('training');
+    }
+    
 }
