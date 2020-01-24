@@ -18,6 +18,7 @@ class CreateTrainingsTable extends Migration
             $table->string('title');
             $table->string('coach');
             $table->string('field');
+            $table->integer('places');
             $table->date('date');
             $table->timestamps();
         });

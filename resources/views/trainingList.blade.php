@@ -23,14 +23,17 @@
                                 die("Connection failed:". $conn->connect_error);
                             }
 
-                            $sql = "SELECT id, title, date from trainings";
+                            $sql = "SELECT id, title, places, date from trainings";
                             $result = $conn-> query($sql);
                             if ($result-> num_rows > 0) {
                                 while($row = $result-> fetch_assoc()){
+                                    if ($row["places"] > 0) {
+                                                        
                                     $id = $row["id"];
                                     $name = $row["title"];
                                     $date = $row["date"];
-                                    echo "<td><tr><a href='" . "/training?id=$id" . "'>" . $name . "</a></tr></td><br>";
+                                    echo "<td><tr><a href='" . "/training?id=$id" . "'>". $date . " - " . $name . "</a></tr></td><br>";
+                                    }
                                 }
                                 echo "</table>";
                             }

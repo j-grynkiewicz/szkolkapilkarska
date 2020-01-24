@@ -22,7 +22,7 @@
                         <?php }
                         else echo '';?>
                         <div class="panel-heading">
-                            <a href="/payment">Płatność</a><br>
+                          
                             <a href="/coachList">Lista trenerów</a><br>
                             <a href="/fieldList">Boiska</a><br>
                             <a href="/trainingList">Treningi</a>

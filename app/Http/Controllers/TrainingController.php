@@ -53,12 +53,14 @@ class TrainingController extends Controller
             'title'    =>  'required',
             'coach'     =>  'required',
             'field'     =>  'required',
+            'places'     =>  'required',
             'date'     =>  'required'
         ]);
         $training = new Training([
             'title'    =>  $request->get('title'),
             'coach'     =>  $request->get('coach'),
             'field'     =>  $request->get('field'),
+            'places'     =>  $request->get('places'),
             'date' =>  $request->get('date')
         ]);
         $training->save();
@@ -101,6 +103,7 @@ class TrainingController extends Controller
             'title'    =>  'required',
             'coach'     =>  'required',
             'field'     =>  'required',
+            'places'     =>  'required',
             'date'     =>  'required'
 
         ]);
@@ -108,6 +111,7 @@ class TrainingController extends Controller
         $training->title = $request->get('title');
         $training->coach = $request->get('coach');
         $training->field = $request->get('field');
+        $training->places = $request->get('places');
         $training->date = $request->get('date');
         $training->save();
         return redirect()->route('trainings.index')->with('success', 'Data Updated');
@@ -119,6 +123,24 @@ class TrainingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function reserve($id)
+    {
+        $training = Training::find($id);
+        return view('trainings.reserve', compact('training', 'id'));
+    }
+    public function subtraction(Request $request, $id)
+    {
+        $training = Training::all()->toArray();
+        $this->validate($request, [
+            'places'     =>  'required',
+
+        ]);
+        $training = $training = Training::find($id);
+        $training->places = $request->get('places');
+        $training->save();
+        return redirect()->route('home')->with('success', 'Data Updated');
+    }
+    
     public function destroy($id)
     {
         $training = $training = Training::find($id);

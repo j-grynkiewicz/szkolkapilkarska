@@ -30,7 +30,7 @@ $fields = Field::select('id', 'name')->get();
             <form method="post" action="{{url('trainings')}}">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <input type="text" name="title" class="form-control" placeholder="Enter Title" />
+                    <input type="text" name="title" class="form-control" placeholder="Wpisz tytuł" />
                 </div>
                 <div class="form-group">
                 <select name="coach" class="form-control">
@@ -47,7 +47,10 @@ $fields = Field::select('id', 'name')->get();
                 </select>
                 </div>
                 <div class="form-group">
-                    <input type="datetime-local" name="date" class="form-control" placeholder="Enter Date" />
+                    <input type="number" name="places" class="form-control" placeholder="000" />
+                </div>
+                <div class="form-group">
+                    <input type="datetime-local" name="date" class="form-control" placeholder="Wprowadź Datę" />
                 </div>
                 
                 <div class="form-group">

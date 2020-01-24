@@ -48,6 +48,10 @@ class HomeController extends Controller
     {
         return view('field');
     }
+    public function reserve()
+    {
+        return view('reserve');
+    }
     public function payment()
     {
         return view('payment');

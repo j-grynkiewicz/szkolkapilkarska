@@ -31,16 +31,19 @@ $fields = Field::select('id', 'name')->get();
                         <div class="form-group">
                             <select name="coach" class="form-control">
                                 @foreach($coaches as $coaches)
-                                     <option value="{{$training->coach}}" name="coach">{{$coaches->name}}</option>
+                                     <option name="coach">{{$coaches->name}}</option>
                                 @endforeach
                              </select>
                         </div>
                         <div class="form-group">
                         <select name="field" class="form-control">
                                 @foreach($fields as $fields)
-                                     <option value="{{$training->field}}" name="field">{{$fields->name}}</option>
+                                     <option name="field">{{$fields->name}}</option>
                                 @endforeach
                              </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="places" class="form-control" value="{{$training->places}}" placeholder="000" />
                         </div>
                         <div class="form-group">
                             <input type="datetime-local" name="date" class="form-control" value="{{$training->date}}" placeholder="Enter Date" />
