@@ -32,4 +32,5 @@ class CreateFieldsTable extends Migration
     {
         Schema::dropIfExists('fields');
     }
+    
 }
