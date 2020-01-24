@@ -38,7 +38,7 @@ Route::get('/fieldList','HomeController@fields')->middleware('auth')->name('fiel
 Route::get('/field','HomeController@field')->middleware('auth')->name('field');
 Route::get('/training','HomeController@training')->middleware('auth')->name('training');
 Route::get('/trainingList','HomeController@trainings')->middleware('auth')->name('trainings');
-Route::get('/reserve','HomeController@reserve')->middleware('auth')->name('reserve');
+
 Route::get('/payment','HomeController@payment')->middleware('auth')->name('payment');
 Route::get('/cash','HomeController@cash')->middleware('auth')->name('cash');
 Route::get('/card','HomeController@card')->middleware('auth')->name('card');
@@ -52,8 +52,9 @@ Route::resource('users', 'UserController');
 Route::resource('coaches', 'CoachController');
 Route::resource('fields', 'FieldController');
 Route::resource('trainings', 'TrainingController');
+Route::resource('reservation', 'ReservationController');
 Route::delete('deleteAccount', 'DestroyController@destroy');
-Route::post('reserve', array('uses' => 'ReservationController@subtraction'));
+
 
 
 use App\Mail\QRCode;
