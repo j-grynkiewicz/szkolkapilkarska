@@ -34,4 +34,5 @@ class CreateCoachesTable extends Migration
     {
         Schema::dropIfExists('coaches');
     }
+    
 }
